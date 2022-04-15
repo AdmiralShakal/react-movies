@@ -14,7 +14,7 @@ class Main extends React.Component {
 
     handleSearch = (movieName,category) => {
         this.setState({loading: true})
-        fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${movieName}&type=${category}`)
+        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${movieName}&type=${category}`)
             .then(res => res.json())
             .then(data => this.setState({ movies: data.Search, loading:false }))
     }
